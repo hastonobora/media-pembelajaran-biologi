@@ -183,8 +183,7 @@ function tampilkanMateri() {
                 📖 Buka Materi
               </button>
 
-              <div class="collapse mt-3"
-                   id="materi-${id}">
+              <div class="collapse mt-3 materi-collapse shadow-sm"
                 <hr>
 
                 ${
@@ -321,4 +320,5 @@ function getYoutubeId(url) {
 =============================== */
 function format(cmd, value = null) {
   document.execCommand(cmd, false, value);
+
 }
