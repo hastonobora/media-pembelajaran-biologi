@@ -300,4 +300,59 @@ html, body {
 
 .editor-area:focus {
   border-color: #0d6efd;
+
+}
+
+/* ===============================
+   DETAIL MATERI LEBIH BESAR
+================================ */
+.materi-collapse {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* card detail lebih lebar */
+.card-materi .collapse {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+/* teks isi materi */
+.materi-collapse p,
+.materi-collapse div {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* gambar lebih besar tapi tetap rapi */
+.materi-collapse img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* video lebih besar */
+.materi-collapse .ratio {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 14px;
+}
+
+/* animasi buka materi */
+.materi-collapse.show {
+  animation: fadeMateri 0.35s ease;
+}
+
+@keyframes fadeMateri {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
