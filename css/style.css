@@ -1,0 +1,303 @@
+/* ===============================
+   GLOBAL FIX (ANTI GESER)
+=============================== */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ===============================
+   ICON SIMULASI
+=============================== */
+.simulasi-icon i{
+  animation: slowRotate 6s linear infinite;
+}
+
+@keyframes slowRotate{
+  from{transform: rotate(0);}
+  to{transform: rotate(360deg);}
+}
+
+.menu-card:hover .simulasi-icon i{
+  animation-play-state: paused;
+  transform: scale(1.15);
+}
+
+/* ===============================
+   HERO
+=============================== */
+.hero_dosen{
+  background: linear-gradient(135deg,#0d6efd,#0b5ed7);
+  color:#fff;
+  padding:60px 0;
+}
+
+.hero{
+  background: linear-gradient(135deg,#198754,#157347);
+  color:#fff;
+  padding:60px 0;
+}
+
+/* ===============================
+   MENU CARD
+=============================== */
+.menu-card{
+  border:none;
+  border-radius:16px;
+  transition:.3s;
+}
+
+.menu-card:hover{
+  transform: translateY(-8px);
+  box-shadow:0 16px 30px rgba(0,0,0,.12);
+}
+
+.menu-icon{
+  font-size:40px;
+}
+
+/* ===============================
+   CARD GLOBAL
+=============================== */
+.card{
+  border:none;
+  border-radius:16px;
+  transition:.3s;
+}
+
+.card:hover{
+  transform: translateY(-5px);
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* ===============================
+   ANIMATION BASE
+=============================== */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* ===============================
+   FLIP CARD (FIX STABIL)
+=============================== */
+.flip-card{
+  perspective:1200px;
+}
+
+.flip-inner{
+  position:relative;
+  width:100%;
+  min-height:220px;
+  transform-style:preserve-3d;
+  transition:transform .7s ease;
+  cursor:pointer;
+}
+
+.flip-inner.is-flipped{
+  transform:rotateY(180deg);
+}
+
+.flip-front,
+.flip-back{
+  position:absolute;
+  inset:0;
+  width:100%;
+  backface-visibility:hidden;
+  border-radius:16px;
+  padding:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.flip-front{
+  background:linear-gradient(135deg,#0d6efd,#20c997);
+  color:#fff;
+}
+
+.flip-back{
+  background:#fff;
+  transform:rotateY(180deg);
+  overflow:auto;
+}
+
+/* ===============================
+   GAMBAR MATERI
+=============================== */
+.materi-image-wrapper{
+  width:100%;
+  height:220px;
+  overflow:hidden;
+  border-radius:12px;
+  margin-bottom:12px;
+}
+
+.materi-image-wrapper img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.materi-img{
+  cursor:zoom-in;
+  transition:.3s;
+}
+
+.materi-img:hover{
+  transform:scale(1.03);
+}
+
+/* ===============================
+   VIDEO BUTTON
+=============================== */
+.video-placeholder{
+  padding:12px 16px;
+  border-radius:12px;
+  background:#f8f9fa;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.video-placeholder:hover{
+  background:#dc3545;
+  color:#fff;
+}
+
+/* ===============================
+   NAVBAR ACTIVE
+=============================== */
+.navbar .nav-link{
+  color:rgba(255,255,255,.75);
+  transition:.3s;
+}
+
+.navbar .nav-link:hover{
+  color:#fff;
+}
+
+.navbar .nav-link.active{
+  color:#fff !important;
+  font-weight:600;
+  position:relative;
+}
+
+.navbar .nav-link.active::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:100%;
+  height:3px;
+  background:#fff;
+}
+
+/* ===============================
+   QUIZ STYLE
+=============================== */
+.quiz-card{
+  background:#fff;
+  border-radius:18px;
+  padding:24px;
+  box-shadow:0 15px 35px rgba(0,0,0,.12);
+  animation:fadeUp .6s ease;
+}
+
+.quiz-option{
+  border:2px solid #e9ecef;
+  border-radius:14px;
+  padding:14px 18px;
+  margin-bottom:12px;
+  cursor:pointer;
+  background:#f8f9fa;
+  transition:.3s;
+  position:relative;
+}
+
+.quiz-option:hover{
+  transform:translateX(6px);
+  border-color:#0d6efd;
+}
+
+/* BENAR */
+.quiz-option.correct{
+  background:#d1f7e3;
+  border-color:#198754;
+}
+
+/* SALAH */
+.quiz-option.wrong{
+  background:#fde2e1;
+  border-color:#dc3545;
+}
+
+/* ===============================
+   SCORE CARD
+=============================== */
+.score-card{
+  border-radius:22px;
+  padding:35px;
+  color:#fff;
+  animation:scorePop .8s ease;
+  box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+
+.score-green{
+  background:linear-gradient(135deg,#198754,#146c43);
+}
+
+.score-blue{
+  background:linear-gradient(135deg,#0d6efd,#0a58ca);
+}
+
+.score-orange{
+  background:linear-gradient(135deg,#fd7e14,#e8590c);
+}
+
+.score-red{
+  background:linear-gradient(135deg,#dc3545,#a71d2a);
+}
+
+@keyframes scorePop{
+  from{opacity:0;transform:scale(.7);}
+  to{opacity:1;transform:scale(1);}
+}
+
+/* ===============================
+   RICH TEXT EDITOR
+=============================== */
+
+.editor-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.editor-toolbar button {
+  border: none;
+  background: #f1f3f5;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.editor-toolbar button:hover {
+  background: #0d6efd;
+  color: white;
+}
+
+.editor-area {
+  min-height: 200px;
+  border: 2px solid #dee2e6;
+  border-radius: 10px;
+  padding: 12px;
+  background: #fff;
+  outline: none;
+}
+
+.editor-area:focus {
+  border-color: #0d6efd;
+}
