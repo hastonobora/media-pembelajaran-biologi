@@ -167,7 +167,7 @@ function tampilkanMateri() {
         getYoutubeId(m.youtubeUrl);
 
       list.innerHTML += `
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="col-12 materi-col">
           <div class="card shadow-sm h-100">
             <div class="card-body d-flex flex-column">
 
@@ -322,3 +322,4 @@ function format(cmd, value = null) {
   document.execCommand(cmd, false, value);
 
 }
+
