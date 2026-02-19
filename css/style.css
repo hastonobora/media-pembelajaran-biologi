@@ -304,55 +304,31 @@ html, body {
 }
 
 /* ===============================
-   DETAIL MATERI LEBIH BESAR
+   CARD MATERI FULL WIDTH
 ================================ */
+.materi-col {
+  transition: all 0.35s ease;
+}
+
+/* DETAIL MATERI BESAR */
 .materi-collapse {
-  font-size: 17px;
-  line-height: 1.8;
-}
-
-/* card detail lebih lebar */
-.card-materi .collapse {
-  background: #ffffff;
+  font-size: 18px;
+  line-height: 1.9;
+  background: #fff;
+  padding: 20px;
   border-radius: 14px;
-  padding: 18px;
 }
 
-/* teks isi materi */
-.materi-collapse p,
-.materi-collapse div {
-  font-size: 17px;
-  line-height: 1.8;
-}
-
-/* gambar lebih besar tapi tetap rapi */
+/* gambar besar */
 .materi-collapse img {
   width: 100%;
-  max-height: 420px;
+  max-height: 500px;
   object-fit: cover;
   border-radius: 12px;
-  margin-bottom: 15px;
 }
 
-/* video lebih besar */
+/* video besar */
 .materi-collapse .ratio {
   border-radius: 12px;
   overflow: hidden;
-  margin-top: 14px;
-}
-
-/* animasi buka materi */
-.materi-collapse.show {
-  animation: fadeMateri 0.35s ease;
-}
-
-@keyframes fadeMateri {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
